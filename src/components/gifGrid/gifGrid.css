@@ -1,0 +1,31 @@
+.category-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #816797;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-eliminar {
+    font-family: 'Bowlby One SC', cursive;
+    color: #51557e;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transform: rotate(0deg);
+    border-radius: 50%;
+    border: medium solid #d6d5a8;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+}
+.btn-eliminar:hover {
+    background: #51557e;
+    color: #d6d5a8;
+    transform: rotate(180deg);
+}

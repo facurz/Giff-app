@@ -1,5 +1,5 @@
-import React from 'react';
 import { useState } from 'react';
+import './addCategory.css';
 
 export const AddCategory = ({ addCategory }) => {
     const [inputValue, setinputValue] = useState('');
@@ -20,7 +20,7 @@ export const AddCategory = ({ addCategory }) => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input
+                <input className='input-search'
                     type='search'
                     placeholder='Buscar Gif'
                     value={inputValue}

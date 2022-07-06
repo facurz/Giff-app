@@ -1,8 +1,9 @@
-import { useModal } from '../hooks/useModal';
-import { Modal } from './Modal';
+import { useModal } from '../../hooks/useModal';
+import { Modal } from '../modal/Modal';
+import './gifItem.css'
 
 export const GifItem = ({ title, url }) => {
-    const [isOpenModal, openModal, closeModal] = useModal(false);
+    const [isOpen, openModal, closeModal] = useModal(false);
     return (
         <div className='card'>
             <div  onClick={openModal}  style={{cursor:'pointer'}}>
@@ -10,7 +11,7 @@ export const GifItem = ({ title, url }) => {
                 {/* <p>{title}</p> */}
             </div>
 
-            <Modal isOpen={isOpenModal} closeModal={closeModal}>
+            <Modal isOpen={isOpen} closeModal={closeModal}>
                 <img className='modal-img' src={url} alt='gif' />
                 <p>{title}</p>
             </Modal>

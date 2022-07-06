@@ -1,5 +1,5 @@
 import { useModal } from '../../hooks/useModal';
-import { Modal } from '../modal/Modal';
+import { Modal } from '../';
 import './gifItem.css'
 
 export const GifItem = ({ title, url }) => {

@@ -1,5 +1,5 @@
 import { useFetchGif } from '../../hooks/useFetchGif';
-import { GifItem } from '../gifItem/GifItem';
+import { GifItem } from '../';
 import './gifGrid.css'
 
 export const GifGrid = ({ category, removeCategory}) => {

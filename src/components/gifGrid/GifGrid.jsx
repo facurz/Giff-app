@@ -1,6 +1,7 @@
 import { useFetchGif } from '../../hooks/useFetchGif';
 import { GifItem } from '../';
 import './gifGrid.css'
+import { Link } from 'react-scroll';
 
 export const GifGrid = ({ category, removeCategory}) => {
     const { images, loading } = useFetchGif(category);
@@ -8,9 +9,10 @@ export const GifGrid = ({ category, removeCategory}) => {
     return (
         <>
             {category && (
-                <div className='category-title'>
+                <div className='category-title' id={category}>
                     <h3>{category}</h3>
-                    <button className='btn-eliminar' onClick={()=>removeCategory(category)}>X</button>
+                    <button className='btn-eliminar' onClick={()=>removeCategory(category)}>✖</button>
+                    <Link className='btn-volver' to='header'>🠕</Link>
                 </div>
             )}
             <div className='card-grid animate__animated animate__bounceInDown'>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AddCategory, GifGrid } from './components';
+import { Link, animateScroll as scroll } from "react-scroll";
 import 'animate.css';
 
 export const GiffApp = () => {
@@ -20,7 +21,7 @@ export const GiffApp = () => {
 
     return (
         <>
-            <header className='header'>
+            <header id='header' className='header'>
                 <h1>GiffApp</h1>
                 <AddCategory addCategory={handleAddCategory} />
 
@@ -28,14 +29,17 @@ export const GiffApp = () => {
                     Borrar Todo
                 </button>
             </header>
-
-            {categories.map(category => (
-                <GifGrid
-                    key={category}
-                    category={category}
-                    removeCategory={handleRemove}
-                />
-            ))}
+            <div style={{display:'flex', justifyContent:'center'}}>
+                {categories.map(category => <Link className='btn-category' to={category}>{category}</Link>)}
+            </div>
+                {categories.map(category => (
+                    <GifGrid
+                        key={category}
+                        category={category}
+                        removeCategory={handleRemove}
+                    />
+                ))}
+            <footer>Diseñando por Facundo Riva Zabala</footer>
         </>
     );
 };

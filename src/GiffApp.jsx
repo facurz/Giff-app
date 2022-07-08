@@ -29,7 +29,7 @@ export const GiffApp = () => {
                     Borrar Todo
                 </button>
             </header>
-            <div style={{display:'flex', justifyContent:'center'}}>
+            <div style={{display:'flex', justifyContent:'center', flexWrap:'wrap'}}>
                 {categories.map(category => <Link className='btn-category' to={category}>{category}</Link>)}
             </div>
                 {categories.map(category => (
@@ -39,7 +39,6 @@ export const GiffApp = () => {
                         removeCategory={handleRemove}
                     />
                 ))}
-            <footer>Diseñando por Facundo Riva Zabala</footer>
         </>
     );
 };

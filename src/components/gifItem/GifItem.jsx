@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import { useModal } from '../../hooks/useModal';
 import { Modal } from '../';
+
 import './gifItem.css'
 
 export const GifItem = ({ title, url }) => {
@@ -18,3 +20,7 @@ export const GifItem = ({ title, url }) => {
         </div>
     );
 };
+GifItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+}

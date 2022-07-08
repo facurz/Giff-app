@@ -1,3 +1,10 @@
+:root{
+    --first-color: #1b2430;
+    --second-color: #51557e;
+    --third-color: #816797;
+    --fourth-color: #D6D5A8;
+}
+
 html {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +21,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #1b2430;
+    background-color: var(--second-color);
     height: 100vh;
 }
 
@@ -34,18 +41,8 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #51557e;
+    background-color: var(--first-color);
     width: 100vw;
-}
-
-
-
-footer{
-    width: 100vw;
-    height: 100px;
-    padding-top: 30px;
-    text-align: center;
-    background-color:#51557e;
 }
 
 h1 {
@@ -53,7 +50,7 @@ h1 {
     font-size: 4rem;
     letter-spacing: 4px;
     text-align: center;
-    color: #d6d5a8;
+    color: var(--fourth-color);
     margin: 0;
 }
 
@@ -63,14 +60,14 @@ h2 {
 
 h3 {
     font-family: 'Bowlby One SC', cursive;
-    color: #d6d5a8;
+    color: var(--fourth-color);
     font-size: 2rem;
     margin: 20px 15px;
 }
 
 .btn-reset {
     min-width: 130px;
-    color: #51557e;
+    color: var(--second-color);
     padding: 5px 10px;
     font-weight: bold;
     font-size: 1.2rem;
@@ -81,7 +78,7 @@ h3 {
     display: inline-block;
     border-radius: 50px;
     outline: none;
-    border: medium solid #d6d5a8;
+    border: medium solid var(--fourth-color);
     background: #fff;
 }
 
@@ -89,20 +86,20 @@ h3 {
     display: inline-block;
     margin: 5px;
     padding: 5px 10px;
-    color: #51557e;
+    color: var(--second-color);
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.7rem;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     border-radius: 50px;
     outline: none;
-    border: medium solid #d6d5a8;
+    border: medium solid var(--fourth-color);
     background: #fff;
 }
 .btn-reset:hover, .btn-category:hover {
-    background: #51557e;
-    color: #d6d5a8;
+    background: var(--second-color);
+    color: var(--fourth-color);
 }
 
 /******************************** MEDIA QUERIES ********************************/

@@ -14,6 +14,6 @@ export const getGifs = async category => {
         url: img.images.original.url,
     }));
 
-    console.log(gifs);
+    // console.log(gifs);
     return gifs;
 };

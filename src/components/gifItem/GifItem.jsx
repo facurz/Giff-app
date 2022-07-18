@@ -9,13 +9,12 @@ export const GifItem = ({ title, url }) => {
     return (
         <div className='card'>
             <div  onClick={openModal}  style={{cursor:'pointer'}}>
-                <img src={url} alt='gif' />
-                {/* <p>{title}</p> */}
+                <img aria-label='gif-image' src={url} alt='gif' />
             </div>
 
             <Modal isOpen={isOpen} closeModal={closeModal}>
                 <img className='modal-img' src={url} alt='gif' />
-                <p>{title}</p>
+                <p data-testid='test-title'>{title}</p>
             </Modal>
         </div>
     );

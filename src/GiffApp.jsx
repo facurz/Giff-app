@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AddCategory, GifGrid } from './components';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link} from "react-scroll";
 import 'animate.css';
 
 export const GiffApp = () => {
-    const [categories, setCategories] = useState(['Breaking Bad']);
+    const [categories, setCategories] = useState(['Breaking bad']);
 
     const handleAddCategory = value => {
         setCategories([value, ...categories]);

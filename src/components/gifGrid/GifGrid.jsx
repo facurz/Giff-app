@@ -16,12 +16,13 @@ export const GifGrid = ({ category, removeCategory}) => {
                 </div>
             )}
             <div className='card-grid animate__animated animate__bounceInDown'>
-                {loading ? (
-                    <h3>Cargando...</h3>
-                ) : (
-                    images.map(img => <GifItem key={img.id} {...img} />)
-                )}
+                {
+                loading 
+                ? (<h4>Cargando...</h4>) 
+                : (images.map(img => <GifItem key={img.id} {...img} />))
+                }
             </div>
         </>
     );
 };
+

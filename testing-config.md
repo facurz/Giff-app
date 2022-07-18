@@ -37,3 +37,17 @@ __jest.setup.js__
 // En caso de necesitar la implementación del FetchAPI
 import 'whatwg-fetch'; // <-- yarn add whatwg-fetch
 ```
+6. Opcional, pero eventualmente necesario para Sass y Less. Modificar jest.config.js:
+```
+yarn add identity-obj-proxy
+```
+__jest.config.js__
+```
+module.exports = {
+  testEnvironment: "jest-environment-jsdom",
+  setupFiles: ["./jest.setup.js"],
+  moduleNameMapper: {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+  }
+};
+```

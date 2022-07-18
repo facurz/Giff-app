@@ -1,7 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { Modal  } from "../../src/components/modal/Modal";
-import '../../src/components/modal/modal.css'
-import { useModal } from "../../src/hooks/useModal";
 
 
 describe('Test en <Modal />', () => {
